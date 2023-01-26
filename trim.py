@@ -61,7 +61,7 @@ def trim_video(frames, input, output):
         if ret:
             if frames[idx][1] - frames[idx][0] > 1200: idx += 1
             if flag == 0 and frame_num >= frames[idx][0]:
-                output_path = output + f'trimed_{frame_num}.mp4'
+                output_path = output + f'/trimed_{frame_num}.mp4'
                 print(output_path)
                 writer = cv2.VideoWriter(output_path, fourcc, int(fps), (int(w), int(h)))
                 flag = 1
